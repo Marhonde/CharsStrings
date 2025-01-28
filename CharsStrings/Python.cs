@@ -30,14 +30,23 @@ public class Python
     }
 
     /// <summary>
-    /// Ренейм Console.ReadLine().
+    /// Ренейм Console.ReadLine(). Если ввести лорем, то выведется LoremIpsum30
     /// </summary>
     /// <param name="s">Строка подсказка</param>
     /// <returns>Следующая строка символов из входного потока или null, если больше нет доступных строк.</returns>
     protected static string input(string s)
     {
         Console.Write(s);
-        return Console.ReadLine() ?? string.Empty;
+        
+        var output = Console.ReadLine();
+        
+        if (output == "лорем")
+            return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                   "Proin bibendum luctus nulla et rutrum. Donec volutpat congue" +
+                   " augue, quis sodales lacus egestas et. Sed ac blandit quam. " +
+                   "Vestibulum nec tortor.";
+        else
+            return output ?? string.Empty;
     }
 
     /// <summary>

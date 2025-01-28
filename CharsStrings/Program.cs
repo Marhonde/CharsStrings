@@ -18,13 +18,12 @@ class Program : Python
             {
                 case 1:
                     _str = input("Введите строку: ");
+                    
+                    print(_str);
 
                     _n = int.Parse(input("Введите длину новой строки: "));
-
-                    if (_str.Length > _n)
-                        _str = _str.Remove(_n, _str.Length - _n);
-                    else
-                        _str = _str.PadLeft(_n, '.');
+                    
+                    _str = _str.Length > _n ? _str.Remove(0, _str.Length - _n) : _str.PadLeft(_n, '.');
                     
                     print($"Полученная строка: {_str}");
                     

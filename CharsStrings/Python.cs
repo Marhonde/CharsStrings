@@ -5,20 +5,16 @@ public class Python
     /// <summary>
     /// Ренейм Console.WriteLine().
     /// </summary>
-    protected static void print()
-    {
+    protected static void print() =>
         Console.WriteLine();
-    }
 
     /// <summary>
     /// Ренейм Console.WriteLine().
     /// </summary>
     /// <param name="s">Строка, которую нужно вывести</param>
     /// <typeparam name="T">Тип элементов источника.</typeparam>
-    protected static void print<T>(T s)
-    {
+    protected static void print<T>(T s) =>
         Console.WriteLine(s);
-    }
 
     /// <summary>
     /// Ренейм Console.ReadLine().
@@ -54,10 +50,9 @@ public class Python
     /// </summary>
     /// <param name="array">Массив который нужно вывести.</param>
     /// <param name="s">Строка подсказка.</param>
-    protected static void PrintArr<T>(string s, IEnumerable<T> array)
-    {
+    protected static void PrintArr<T>(string s, IEnumerable<T> array) =>
         print($"{s}: [{string.Join(", ", array)}]");
-    }
+    
 
     /// <summary>
     /// Выводит матрицу.
